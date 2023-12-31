@@ -397,7 +397,7 @@ hr {
 }
 
 hr.major {
-	margin: 3em 0;
+	margin: 3em ;
 }
 
 .align-left {
@@ -1892,12 +1892,14 @@ header.major {
 	width: -webkit-max-content;
 	width: -ms-max-content;
 	width: max-content;
-	margin-bottom: 2em;
+	margin-top: 2em;
+	margin-bottom: 0.8em;
 }
 
 header.major> :first-child {
 	margin-bottom: 0;
 	width: calc(100% + 0.5em);
+	color: #ffffff;
 }
 
 header.major> :first-child:after {
@@ -3724,8 +3726,9 @@ body.is-preload #banner>.inner {
 /* Main */
 
 #main {
-	background-image: url("../../images/風景1.jpeg");
-	background-size: 760px 552px;
+	background-image: url("../../images/2024_January_1920x1080_01.jpg");
+	background-size: cover; /* 使用 cover 保持圖片比例並填滿容器 */
+    background-position: center center; /* 將圖片置中 */
 	border: solid 1px rgb(0, 0, 0);
 }
 
@@ -3750,10 +3753,11 @@ body.is-preload #banner>.inner {
 }
 
 #main>*>.inner {
-	padding: 3em 0 -1em 0;
+	padding: 10em 0 10em 0;
 	margin: 0 auto;
 	max-width: 65em;
 	width: calc(100% - 6em);
+
 }
 
 @media screen and (max-width: 736px) {
