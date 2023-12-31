@@ -3733,7 +3733,7 @@ body.is-preload #banner>.inner {
 }
 
 #main2 {
-	background-image: url("../../images/風景1.jpeg");
+	background-color:#2a2f4a;
 	background-size: 760px 522px;
 	border: solid 1px rgb(0, 0, 0);
 }
