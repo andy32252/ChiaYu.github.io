@@ -3881,8 +3881,8 @@ body.is-preload #banner>.inner {
 
 #contact>.inner> :nth-child(2n) {
 	padding-left: 3em;
-	background-image: url("../../images/meow4.jpg");
-	background-size: 760px 700px;
+	background-image: url("../../images/meow高清.jpg");
+	background-size: 800px 650px;
 	width: 70%;
 }
 
@@ -3986,7 +3986,7 @@ body.is-preload #banner>.inner {
 	-webkit-transition: -webkit-filter 0.25s ease, -webkit-filter 0.25s ease, opacity 0.375s ease-out;
 	-ms-transition: -ms-filter 0.25s ease, -webkit-filter 0.25s ease, opacity 0.375s ease-out;
 	transition: filter 0.25s ease, -webkit-filter 0.25s ease, opacity 0.375s ease-out;
-	padding-top: 3.25em;
+	padding-top: 3.0em;
 }
 
 #wrapper.is-transitioning {

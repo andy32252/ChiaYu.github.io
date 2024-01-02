@@ -2638,6 +2638,26 @@ input, select, textarea {
 				margin-bottom: 3em;
 			}
 
+			.carousel article .image.featured2 {
+				position: relative;
+				left: -1em;
+				top: 0;
+				width: 350px;
+				height: auto;
+				margin-right: -2em;
+				margin-bottom: 3em;
+			}
+
+			.carousel article .image.featured3 {
+				position: relative;
+				left: -1em;
+				top: 0;
+				width: 500px;
+				height: auto;
+				margin-right: -2em;
+				margin-bottom: 3em;
+			}
+
 			.carousel article p {
 				text-align: center;
 			}

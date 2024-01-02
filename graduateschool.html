@@ -68,7 +68,7 @@
                             <p><strong>資訊科學：</strong>使用機器學習，使用Random forest、Decision tree、KNN等模型對自閉症資料集進行預測，使用jupyter進行實作。</p>
                             <p><strong>管理理論與實務：</strong>學習企業管理、行銷、生管、決策等理論和方法，並且結合實際案例去做討論。</p>
                             <p><strong>醫療資訊系統：</strong>學習如何利用postman去新增、修改檔案，並學習FHIR架構，模擬情境，並遵循FHIR Profile，並針對醫療議題去分析及探討。</p>
-                            <p><strong>醫療影像儲存與傳輸:</strong>模擬影像如何做傳輸的相關情境，畫循序圖，了解IHE profile並報告。</p>
+                            <p><strong>醫療影像儲存與傳輸：</strong>模擬影像如何做傳輸的相關情境，畫循序圖，了解IHE profile並報告。</p>
                         </div>
                     </header>
                 </section>
@@ -136,62 +136,73 @@
 
 					<section id="features" class="container special">
 						<header>
-							<h2>研究所的作品</h2>
-							<p>Ipsum volutpat consectetur orci metus consequat imperdiet duis integer semper magna.</p>
+							<h2>研究所的生活及空閒時間做的一些小實驗</h2>
+							<p>還在增加中~~~</p>
 						</header>
 						<div class="row">
 
 							<article class="col-4 col-12-mobile special">
-								<a href="https://youtu.be/nLY0qUMlSWY" class="image featured"><img src="images/pcshop.jpg" width=300px alt="" /></a>
+								<a href="cifar_test.html" class="image featured"><img src="images/CIFAR-100-0000000433-b71f61c0_hPEzMRg.jpg" width=300px alt="" /></a>
 								<header>
-									<h3><a href="#">個人電腦商城</a></h3>
+									<h3><a>Pytorch</a></h3>
 								</header>
 								<p>
-									使用VirtualBox作為虛擬機軟體，環境為Linux CentOS 8，安裝Wordpress，並利用其架設網站(Apache)，
-								需要填寫網站的名稱、管理員帳號、密碼、電子郵件等資訊設定，可以選擇合適的佈景主題、外掛程式、
-								功能選項等，打造一個類似PChome的線上購物平台。WordPress的後台管理介面中，可以新增商品、分類
-								、頁面、文章等內容，並設定適當的價格、庫存、運費、付款方式等資訊，在WordPress的後台管理介面中
-								，測試我的網站的功能和效能，我在虛擬機中設定網路連線，並將我的網站發佈到網際網路上，讓其他人可
-								以訪問和購買我的商品和服務。如要更新網站，只需在資料庫(MariaDB)新增即可。
+									使用 Kaggle 上的 CIFAR-10 資料集，包含了 60,000 張 32x32 的彩色圖片，共有 10 個類別:飛機、汽車、鳥類、貓、鹿、狗、青蛙、馬、船、卡車，每一
+                                    個類別都有 6000 張圖片，使用一般卷積神經網路 CNN 及 ResNet 做比較，對 CIFAR-10 進行模型的
+                                    訓練，並且比較兩者差異，ResNet 模型採用了殘差結構，在同樣的參數下，使用ResNet的準確率較高。
 								</p>
-								<li><a href="https://youtu.be/nLY0qUMlSWY" class="button">作品影片</a></li>
+								<li><a href="cifar_test.html" class="button">實作心得</a></li>
+							</article>
+							
+							<article class="col-4 col-12-mobile special">
+								<a class="image featured"><img src="images/北榮.jpg" width=100px height=286px alt="" /></a>
+								<header>
+									<h3><a>2023至北榮醫學工程部實習</a></h3>
+								</header>
+								<p>
+									這份實習對我來說受益良多，了解到醫院有許多困難之處，實習內容包括:<br>
+                                    1.醫療器材管理資訊化建置及維護管理。<br>
+                                    2.智慧醫院轉型專案管理協調。<br>
+                                    3.智能醫工系統資料整理上傳。<br>
+                                    4.醫學工程部網頁管理維護。<br>
+                                    5.醫院評鑑工作支援。
+								</p>
 							</article>
 
-							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="images/CT.jpeg" width=300px height=234px alt="" /></a>
+                            <article class="col-4 col-12-mobile special">
+								<a class="image featured"><img src="images/工廠.png" width=100px height=286px alt="" /></a>
 								<header>
-									<h3><a href="#">基於卷積神經網路於肺炎辨識之研究</a></h3>
+									<h3><a>與教授執行計畫</a></h3>
 								</header>
 								<p>
-									使用卷積神經網路(Convolutional Neural Networks, CNN)對肺部X光之影像進行處理並判斷是否為感染肺炎進行辨認與探討。
-								美國國家衛生院(NIH)胸腔X光影像資料集，2017年發布，51648張影像，包含15個類別 (14個疾病及1個未發現疾病類別)，
-								將資料集依照80:20比例進行分割，分割後驗證集為41,318張張，訓練集為10,331張，對原始影像在合理的範圍內進行翻轉、
-								旋轉、縮放等處理，增加資料量、避免過度擬合，架構是參考DenseNet進行設計，其優點包含緩解梯度消失問題，加強特徵傳遞
-								鼓勵特徵重用，減少參數數量，提高準確率，降低計算成本。
+									在實習的同時，也與教授一直做計劃接案子，是在協助製造業進行溫室氣體盤查，由於金管會於2022年要求全體上市櫃公司於2027年前完成溫室氣體盤查，許多製造業都要對自身企業所產生的溫室氣體
+                                    做揭露，在計畫進行的過程中，與教授一同至工廠來協助製造業，指導他們如何做出溫室氣體盤查報告，實際盤點工廠內的機台、器具、車輛等等，計算出溫室氣體的排放量，並製作成溫室氣體盤查報告。
 								</p>
-								<li><a href="https://youtu.be/1GoanpLw658" class="button">作品影片</a></li>
-								<li><a href="https://github.com/andy32252/LungImage_deduction" class="button">GitHub</a>
- 
-							</article>
-
-							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="images2/BC_PHR.png" width=100px height=234px alt="" /></a>
-								<header>
-									<h3><a href="#">運用區塊鏈加密機制建立符合FHIR格式之個人健康資料管理平台</a></h3>
-								</header>
-								<p>
-									使用區塊鏈技術來保護資料的安全及隱私性，並以區塊鏈有不可竄改、公開透明、去中心化的特性，來進行驗證與實做個人健康管理APP。
-									而在資料選擇及格式上，我們選擇健康存摺資料，將原本XML格式轉換成符合國際標準的FHIR格式進行編碼，因為FHIR格式的個人資料可以在不同醫療單位進行交換，
-									像是個人健康檢查、診所看病、醫院住院等相關資料，都可以整合在一起儲存並做使用，達成互操作性。在實作上，我們建立了個人健康紀錄管理的應用程式，
-									並且整合健康存摺系統，達到方便、個人化的可使用性。
-								</p>
-								<li><a href="https://github.com/andy32252/BlockChain-FHIR-App" class="button">GitHub</a>
 							</article>
 						</div>
 					</section>
 
 				</div>
 
+                <div class="wrapper style2">
+                    <article id="main" class="container special">
+						
+						<header>
+                            <br>
+							<p>
+                    年輕就是本錢，鞭策自己勇往直前!!<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;雖然知道努力不一定會成功，但是不努力一定會很輕鬆XD
+						</p>
+                        </header>
+                        <p>
+							研究所的生活給我的感覺是非常的扎實，除了實習、跟著教授一起做計劃、課堂作業以外，空閒時間也都是在看一些paper、做一些想做的project、每天都感覺時間不夠用，總有學不完的知識，
+                            像是AI的model，每天都有好多新的AI工具，像我寫的網頁，網路上都有不用撰寫程式碼，能夠拉方塊製作個人的網頁了，感覺自己好像一直都跟不上時代，但每天還是要努力的學習著!!!
+						</p>
+
+					</article>
+
+				</div>
+                
 			<!-- Footer -->
 				<div id="footer">
 					<div class="container">
