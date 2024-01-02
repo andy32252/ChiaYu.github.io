@@ -3876,14 +3876,15 @@ body.is-preload #banner>.inner {
 	/*background-image: url("../../images/meow14.jpeg");
 				background-size: 760px 680px;*/
 	border-right: solid 1px rgba(212, 212, 255, 0.1);
-	width: 60%;
+	width: 100%;
 }
 
 #contact>.inner> :nth-child(2n) {
-	padding-left: 3em;
-	background-image: url("../../images/meow高清.jpg");
-	background-size: 800px 650px;
-	width: 70%;
+	padding: 4em 3em 0em 0em;
+	background-image: url("../../images/松鼠.jpg");
+	background-size: cover;
+	width: 100%;
+
 }
 
 #contact>.inner>.split {
