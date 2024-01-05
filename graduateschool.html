@@ -20,7 +20,7 @@
                     <!-- Inner -->
                         <div class="inner">
                             <header>
-                                <h1><a href="index.html" id="logo">研究所</a></h1>
+                                <h1><a id="logo">研究所</a></h1>
                                 <hr />
                             </header>
                             <footer>
@@ -58,7 +58,17 @@
                         </nav>
 
                 </div>
-
+                <audio id="backgroundMusic" src="../Chia-Yu/images/想和你看五月的晚霞.mp3" loop></audio>
+    			<button id="playPauseButton">播放/暫停</button>
+				<button id="volumeUpButton">增加音量</button>
+				<button id="volumeDownButton">降低音量</button>
+				<button id="prevButton">上一首</button>
+				<button id="nextButton">下一首</button>
+				<select id="songList"></select>
+				<span id="currentSongIndex"></span>
+				<span id="currentSongName"></span>
+				<input type="range" id="progressBar" value="0" max="100" step="1">
+   			 	<span id="currentTime">0:00</span> / <span id="duration">0:00</span>
 
 			<!-- Banner -->
                 <section id="banner">
@@ -227,7 +237,7 @@
 								<!-- Copyright -->
 									<div class="copyright">
 										<ul class="menu">
-											<li>&copy; 這是我本人做的</li><li>Design: <a href="http://html5up.net">by Chia-Yu</a></li>
+											<li>&copy; 這是我本人做的</li><li>Design: <a>by Chia-Yu</a></li>
 										</ul>
 									</div>
 
