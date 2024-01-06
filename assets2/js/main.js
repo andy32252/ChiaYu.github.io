@@ -249,10 +249,10 @@
 
 
 			var playlist = [
-				"../Chia-Yu/images/想和你看五月的晚霞.mp3",
-				"../Chia-Yu/images/從前說.mp3",
-				"../Chia-Yu/images/仗著.mp3",
-				"../Chia-Yu/images/刻在我心底的名字.mp3"
+				"./images/想和你看五月的晚霞.mp3",
+				"./images/從前說.mp3",
+				"./images/仗著.mp3",
+				"./images/刻在我心底的名字.mp3"
 				// 添加更多歌曲...
 			];
 
