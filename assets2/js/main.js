@@ -15,7 +15,9 @@
 			}
 
 		};
+	
 
+	
 	// Breakpoints.
 	breakpoints({
 		wide:      [ '1281px',  '1680px' ],
@@ -366,5 +368,7 @@
 		});
 	
 	})(jQuery);
+
+	
 
 })(jQuery);

@@ -72,6 +72,7 @@ input, select, textarea {
 	appearance: none;
 }
 
+
 /* Basic */
 
 	html {
@@ -2192,7 +2193,7 @@ input, select, textarea {
 		padding: 7.5em 0 2em 0;
 		cursor: default;
 	}
-
+	
 		#header:before {
 			content: '';
 			display: inline-block;
