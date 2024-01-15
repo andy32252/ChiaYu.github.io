@@ -11,7 +11,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets2/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets2/css/noscript.css" /></noscript>
+		
 	</head>
+	
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
 
@@ -71,7 +73,17 @@
 				<span id="currentSongName"></span>
 				<input type="range" id="progressBar" value="0" max="100" step="1">
    			 	<span id="currentTime">0:00</span> / <span id="duration">0:00</span>
-				
+				<style>
+					span:not(#duration):not(#currentTime):not(#currentSongIndex):not(#currentSongName){
+					/* 让弹出来的文字不被选中，影响操作体验 */
+					user-select: none;
+					cursor: default;
+					font-size: 20px;
+					color: blanchedalmond;
+					position: absolute;
+					transition: 2s;
+					}
+				</style>
 			<!-- Banner -->
 				<section id="banner">
 					<header>
@@ -300,9 +312,9 @@
 						</div>
 					</div>
 				</div>
-
+			
 		</div>
-
+		
 		<!-- Scripts -->
 			<script src="assets2/js/jquery.min.js"></script>
 			<script src="assets2/js/jquery.dropotron.min.js"></script>
@@ -317,5 +329,62 @@
 			<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
 			<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js"></script>
 			-->
+			<script>
+				// 設置隨機出現的文字
+				var arr = ["關於感情問題，我一律建議分手!!!","每天對自己說你是最棒的!!!",
+				"只要路是對的，就不怕路遠!!!","研究發現，生日過越多的人就越老!!!",
+				"不完美的生活裡，找到完整的自己!!!","女生說喜歡乾淨的男生，其實就是說喜歡長得帥的!!!",
+				"努力不為了誰，只為不錯過更好的自己!!!","當你懷疑人生的時候，不要懷疑，這就是你的人生!!!","不為失敗找藉口，要為成功找方法!!!","沒有負能量，哪來正能量!!!"]
+				document.onclick = function(x){
+				// 元素節點
+				var span1 = document.createElement("span")
+				// 當前滑鼠位置
+				span1.style.left = x.clientX + "px"
+				span1.style.top = x.clientY + "px"
+				// 找arr隨機文字
+				span1.innerHTML = arr[Math.floor(Math.random()*arr.length)]
+				// 動畫效果
+				setTimeout(function(){
+				span1.style.opacity = "1"
+				span1.style.transform = "translateY(-100px)"
+				},100)
+				setTimeout(function(){
+				span1.style.opacity = "0"
+				span1.style.transform = "translate(-100px,-100px)"
+				},1500)
+				// 清掉文字
+				var chi = document.getElementsByClassName("span")
+				for(var i = 0;i<chi.length;i++){
+				if(chi[i].style.opacity === "0"){
+				document.body.removeChild(chi[i])
+				}
+				}
+				// span加到body
+				document.body.appendChild(span1)
+				}
+			</script>
+			<script type="module">
+				// Import the functions you need from the SDKs you need
+				import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+				import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+				// TODO: Add SDKs for Firebase products that you want to use
+				// https://firebase.google.com/docs/web/setup#available-libraries
+			  
+				// Your web app's Firebase configuration
+				// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+				const firebaseConfig = {
+				  apiKey: "AIzaSyAOncDxiVdxErSR8IGy2bOKyBYcKJ2o_7E",
+				  authDomain: "pagetest-20568.firebaseapp.com",
+				  projectId: "pagetest-20568",
+				  storageBucket: "pagetest-20568.appspot.com",
+				  messagingSenderId: "813105388025",
+				  appId: "1:813105388025:web:0cd0a15a8e2676883a0528",
+				  measurementId: "G-WFVHF0FV22"
+				};
+			  
+				// Initialize Firebase
+				const app = initializeApp(firebaseConfig);
+				const analytics = getAnalytics(app);
+			</script>
 	</body>
 </html>
