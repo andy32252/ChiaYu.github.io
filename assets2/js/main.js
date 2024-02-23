@@ -301,13 +301,9 @@
 			function playSong() {
 				audio.src = playlist[currentSongIndex];
 				audio.load();
-				audio.addEventListener("canplay", function waitForCanPlay() {
-					audio.play();
-					updateSongInfo();
-					audio.removeEventListener("canplay", waitForCanPlay);
-				});
+				audio.play(); // 直接播放，无需等待canplay事件
+				updateSongInfo();
 			}
-			
 
 			function updateSongInfo() {
 				currentSongIndexSpan.textContent = "歌曲 " + (currentSongIndex + 1) + " / " + playlist.length;
@@ -347,7 +343,20 @@
 				progressBar.value = (currentTime / duration) * 100;
 				currentTimeSpan.textContent = formatTime(currentTime);
 				durationSpan.textContent = formatTime(duration);
+			});			
+
+			audio.addEventListener("ended", function () {
+				playNextSong();
 			});
+			
+			function playNextSong() {
+				// 计算下一首歌曲的索引
+				currentSongIndex = (currentSongIndex + 1) % playlist.length;
+			
+				// 播放下一首歌曲
+				playSong();
+				updateSongInfo();
+			}			
 	
 			progressBar.addEventListener("input", function () {
 				// 當用戶拖動進度條時，設定音樂的播放時間

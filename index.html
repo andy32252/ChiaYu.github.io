@@ -53,7 +53,11 @@
 								</li>
 								-->
 								<li><a href="portfolio.html">作品集</a></li>
-								<li><a href="graduateschool.html">研究所</a></li>
+								<li><a href="graduateschool.html">研究所</a>
+									<ul>
+										<li><a href="right-sidebar.html">實習經驗</a></li>								
+									</ul>
+								</li>
 								<li><a href="researchdirection.html">目前研究方向</a></li>
 								<!--<li><a href="resume.html">個人簡歷</a></li>-->
 								<li><a href="seniorproject.html">大學專題</a></li>
@@ -198,13 +202,14 @@
 						<header>
 							<h2><a>目前就讀國立臺北護理健康大學-研究所</a></h2>
 							<p>
-								研究方向:以ArciMate建模碳足跡之資訊系統
+								研究方向:以ArchiMate建置碳足跡之資訊系統架構:某線束廠為例
+								
 							</p>
 						</header>
-						<p>
-							感謝教導我的老師們，因為他們都很專業、熱心和負責，不但教導我們專業知識和技能，還鼓勵我們參加各種競賽、實習和交流活動，讓我們有更多的學習機會和成長空間。
-						在大學裡，我很享受這個系所的學習氛圍，因為這裡的同學們都很友善、合作和互助，我們可以一起討論課程、做專題、考證照、分享心得，也可以一起參加社團、志工、活動等，讓我們的大學生活更豐富多彩。
-						我會期待這個系所的畢業出路，因為這裡的畢業生都有在各種資訊化的工商業機構或醫療保健機構從事相關的工作，或者是追求更高的學術成就。
+						<p style = "text-indent: 2em;">
+							隨著全球氣候變遷日益嚴重,減碳已成為各國共同目標，尤其歐美已由道德訴求轉為法規規範。歐美是台灣重要的出口地區，為因應歐美碳邊境節整機制(Carbon Border Adjustment Mechanism, CBAM)，
+						以及清潔競爭法案（Clean Competition Act, CCA）所需提交的碳足跡資訊，企業首先必須結合生產資訊系統方能有效蒐集碳足跡資訊,了解碳排放的來源與數量。企業架構可有效校準企業流程、資訊系統與實體設備，
+						更有可視覺化建模語言ArchiMate，本研究選擇已推行綠色供應鏈的某線束廠為個案,利用ArchiMate規劃為案例公司建立企業架構模型，涵蓋策略、業務、應用和技術層面，及識別潛在的減碳機會。
 						</p>
 						<footer>
 							<a href="researchdirection.html" class="button">目前研究題目 Continue Reading</a>
@@ -364,11 +369,11 @@
 				// 動畫效果
 				setTimeout(function(){
 				span1.style.opacity = "1"
-				span1.style.transform = "translateY(-100px)"
+				span1.style.transform = "translateY(-80px)"
 				},100)
 				setTimeout(function(){
 				span1.style.opacity = "0"
-				span1.style.transform = "translate(-100px,-100px)"
+				span1.style.transform = "translate(-80px,-80px)"
 				},1500)
 				// 清掉文字
 				var chi = document.getElementsByClassName("span")

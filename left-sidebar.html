@@ -6,11 +6,12 @@
 -->
 <html>
 	<head>
-		<title>Left Sidebar - Helios by HTML5 UP</title>
+		<title>Chia-Yu的個人網站</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets2/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets2/css/noscript.css" /></noscript>
+		
 	</head>
 	<body class="left-sidebar is-preload">
 		<div id="page-wrapper">
@@ -21,39 +22,67 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="index.html" id="logo">Helios</a></h1>
+								<h1><a id="logo">Hello I'm Chia Yu Chu</a></h1>
+								<hr />
+								<p>This is my self-introduction</p>
 							</header>
+							<footer>
+								<a href="#banner" class="button circled scrolly">Start</a>
+							</footer>
 						</div>
 
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
 								<li><a href="index.html">Home</a></li>
+								<!--
 								<li>
-									<a href="#">Dropdown</a>
+									
+										<a href="portfolio.html">Anthor page</a>
 									<ul>
-										<li><a href="#">Lorem ipsum dolor</a></li>
-										<li><a href="#">Magna phasellus</a></li>
-										<li><a href="#">Etiam dolore nisl</a></li>
-										<li>
-											<a href="#">And a submenu &hellip;</a>
-											<ul>
-												<li><a href="#">Lorem ipsum dolor</a></li>
-												<li><a href="#">Phasellus consequat</a></li>
-												<li><a href="#">Magna phasellus</a></li>
-												<li><a href="#">Etiam dolore nisl</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Veroeros feugiat</a></li>
+										<li><a href="portfolio.html">作品集</a></li>
+										<li><a href="graduateschool.html">研究所</a></li>
+										<li><a href="researchdirection.html">目前研究方向</a></li>
+										<li><a href="resume.html">個人簡歷</a></li>
+										<li><a href="seniorproject.html">大學專題</a></li>
+										<li><a href="resumePDF.html">個人簡歷-履歷表</a></li>
+											
 									</ul>
+									
 								</li>
-								<li><a href="left-sidebar.html">Left Sidebar</a></li>
-								<li><a href="right-sidebar.html">Right Sidebar</a></li>
-								<li><a href="no-sidebar.html">No Sidebar</a></li>
+								-->
+								<li><a href="portfolio.html">作品集</a></li>
+								<li><a href="graduateschool.html">研究所</a></li>
+								<li><a href="researchdirection.html">目前研究方向</a></li>
+								<!--<li><a href="resume.html">個人簡歷</a></li>-->
+								<li><a href="seniorproject.html">大學專題</a></li>
+								<li><a href="resumePDF.html">個人簡歷-履歷表</a></li>
 							</ul>
 						</nav>
 
 				</div>
+				<audio id="backgroundMusic" src="./images/想和你看五月的晚霞.mp3" loop></audio>
+    			<button id="playPauseButton">播放/暫停</button>
+				<button id="volumeUpButton">增加音量</button>
+				<button id="volumeDownButton">降低音量</button>
+				<button id="prevButton">上一首</button>
+				<button id="nextButton">下一首</button>
+				<select id="songList"></select>
+				<span id="currentSongIndex"></span>
+				<span id="currentSongName"></span>
+				<input type="range" id="progressBar" value="0" max="100" step="1">
+   			 	<span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+				<style>
+					span:not(#duration):not(#currentTime):not(#currentSongIndex):not(#currentSongName){
+					/* 顯示的文字不會被點擊 */
+					user-select: none;
+					cursor: default;
+					font-size: 20px;
+					color: blanchedalmond;
+					position: absolute;
+					transition: 2s;
+					}
+				</style>
 
 			<!-- Main -->
 				<div class="wrapper style1">

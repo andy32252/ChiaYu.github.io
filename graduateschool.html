@@ -49,7 +49,11 @@
                                 </li>
                                 -->
                                 <li><a href="portfolio.html">作品集</a></li>
-                                <li><a href="graduateschool.html">研究所</a></li>
+                                <li><a href="graduateschool.html">研究所</a>
+									<ul>
+										<li><a href="right-sidebar.html">實習經驗</a></li>								
+									</ul>
+								</li>
                                 <li><a href="researchdirection.html">目前研究方向</a></li>
                                 <!--<li><a href="resume.html">個人簡歷</a></li>-->
                                 <li><a href="seniorproject.html">大學專題</a></li>
@@ -93,7 +97,8 @@
 						<header>
                             <br>
 							<p>
-								研究方向:以ArciMate建模碳足跡之資訊系統
+								研究題目:以ArchiMate建置碳足跡之資訊系統架構:								某線束廠為例
+								
 							</p>
 						</header>
 						<p>
@@ -109,7 +114,7 @@
 
 				</div>
             <!-- Carousel -->
-            <a class="image featured2"><img src="images2/貓貓高清.jpg" width= 100px alt="" /></a>
+            <!--<a class="image featured2"><img src="images2/貓貓高清.jpg" width= 100px alt="" /></a>
                 <section class="carousel">
                     <div class="reel">
                         <br>
@@ -141,6 +146,7 @@
 
                     </div>
                 </section>
+			-->
 			<!-- Features -->
 				<div class="wrapper style1">
 
@@ -259,5 +265,40 @@
 			<script src="assets2/js/util.js"></script>
 			<script src="assets2/js/main.js"></script>
 			<script src="assets2/js/index.js"></script>
+			<script>
+				// 設置隨機出現的文字
+				var arr = ["關於感情問題，我一律建議分手!!!","每天對自己說你是最棒的!!!",
+				"只要路是對的，就不怕路遠!!!","研究發現，生日過越多的人就越老!!!",
+				"不完美的生活裡，找到完整的自己!!!","女生說喜歡乾淨的男生，其實是喜歡長得帥的!!!",
+				"努力不為了誰，只為不錯過更好的自己!!!","當你懷疑人生的時候，不要懷疑，這就是你的人生!!!","不為失敗找藉口，要為成功找方法!!!","沒有負能量，哪來正能量!!!"
+				,"明明可以靠顏值吃飯，偏偏卻要工作，我不知道明明是誰，反正我是偏偏...","小時候媽媽說，乖一點才交得到女朋友，後來發現，不乖可以同時交好幾個!!!","常喝珍奶是不好的，如果戒不掉一定是這裡有賣!!!"]
+				document.onclick = function(x){
+				// 元素節點
+				var span1 = document.createElement("span")
+				// 當前滑鼠位置
+				span1.style.left = x.clientX + "px"
+				span1.style.top = x.clientY + "px"
+				// 找arr隨機文字
+				span1.innerHTML = arr[Math.floor(Math.random()*arr.length)]
+				// 動畫效果
+				setTimeout(function(){
+				span1.style.opacity = "1"
+				span1.style.transform = "translateY(-80px)"
+				},100)
+				setTimeout(function(){
+				span1.style.opacity = "0"
+				span1.style.transform = "translate(-80px,-80px)"
+				},1500)
+				// 清掉文字
+				var chi = document.getElementsByClassName("span")
+				for(var i = 0;i<chi.length;i++){
+				if(chi[i].style.opacity === "0"){
+				document.body.removeChild(chi[i])
+				}
+				}
+				// span加到body
+				document.body.appendChild(span1)
+				}
+			</script>
 	</body>
 </html>
