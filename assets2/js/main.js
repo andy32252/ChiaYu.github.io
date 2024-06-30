@@ -1,9 +1,7 @@
-(function($) {
-
-	var	$window = $(window),
+(function ($) {
+	var $window = $(window),
 		$body = $('body'),
 		settings = {
-
 			// Carousels
 			carousels: {
 				speed: 4,
@@ -13,26 +11,22 @@
 			music: {
 				playing: true
 			}
-
 		};
-	
 
-	
 	// Breakpoints.
 	breakpoints({
-		wide:      [ '1281px',  '1680px' ],
-		normal:    [ '961px',   '1280px' ],
-		narrow:    [ '841px',   '960px'  ],
-		narrower:  [ '737px',   '840px'  ],
-		mobile:    [ null,      '736px'  ]
+		wide: ['1281px', '1680px'],
+		normal: ['961px', '1280px'],
+		narrow: ['841px', '960px'],
+		narrower: ['737px', '840px'],
+		mobile: [null, '736px']
 	});
 
 	// Play initial animations on page load.
-	$window.on('load', function() {
-		window.setTimeout(function() {
+	$window.on('load', function () {
+		window.setTimeout(function () {
 			$body.removeClass('is-preload');
 		}, 100);
-		
 	});
 
 	// Dropdowns.
@@ -45,27 +39,18 @@
 
 	// Scrolly.
 	$('.scrolly').scrolly({
-		offset: 500
+		offset: 180
 	});
 
 	// Nav.
 
 	// Button.
-	$(
-		'<div id="navButton">' +
-			'<a href="#navPanel" class="toggle"></a>' +
-		'</div>'
-	)
-		.appendTo($body);
+	$('<div id="navButton">' + '<a href="#navPanel" class="toggle"></a>' + '</div>').appendTo(
+		$body
+	);
 
 	// Panel.
-	$(
-		'<div id="navPanel">' +
-			'<nav>' +
-				$('#nav').navList() +
-			'</nav>' +
-		'</div>'
-	)
+	$('<div id="navPanel">' + '<nav>' + $('#nav').navList() + '</nav>' + '</div>')
 		.appendTo($body)
 		.panel({
 			delay: 500,
@@ -78,15 +63,14 @@
 		});
 
 	// Carousels.
-	$('.carousel').each(function() {
-
-		var	$t = $(this),
+	$('.carousel').each(function () {
+		var $t = $(this),
 			$forward = $('<span class="forward"></span>'),
 			$backward = $('<span class="backward"></span>'),
 			$reel = $t.children('.reel'),
 			$items = $reel.children('article');
 
-		var	pos = 0,
+		var pos = 0,
 			leftLimit,
 			rightLimit,
 			itemWidth,
@@ -95,58 +79,53 @@
 
 		// Items.
 		if (settings.carousels.fadeIn) {
-
 			$items.addClass('loading');
 
 			$t.scrollex({
 				mode: 'middle',
 				top: '-20vh',
 				bottom: '-20vh',
-				enter: function() {
-
-					var	timerId,
+				enter: function () {
+					var timerId,
 						limit = $items.length - Math.ceil($window.width() / itemWidth);
 
-					timerId = window.setInterval(function() {
-						var x = $items.filter('.loading'), xf = x.first();
+					timerId = window.setInterval(function () {
+						var x = $items.filter('.loading'),
+							xf = x.first();
 
 						if (x.length <= limit) {
-
 							window.clearInterval(timerId);
 							$items.removeClass('loading');
 							return;
-
 						}
 
 						xf.removeClass('loading');
-
 					}, settings.carousels.fadeDelay);
-
 				}
 			});
-
 		}
 
 		// Main.
-		$t._update = function() {
+		$t._update = function () {
 			pos = 0;
-			rightLimit = (-1 * reelWidth) + $window.width();
+			rightLimit = -1 * reelWidth + $window.width();
 			leftLimit = 0;
 			$t._updatePos();
 		};
 
-		$t._updatePos = function() { $reel.css('transform', 'translate(' + pos + 'px, 0)'); };
+		$t._updatePos = function () {
+			$reel.css('transform', 'translate(' + pos + 'px, 0)');
+		};
 
 		// Forward.
 		$forward
 			.appendTo($t)
 			.hide()
-			.mouseenter(function(e) {
-				timerId = window.setInterval(function() {
+			.mouseenter(function (e) {
+				timerId = window.setInterval(function () {
 					pos -= settings.carousels.speed;
 
-					if (pos <= rightLimit)
-					{
+					if (pos <= rightLimit) {
 						window.clearInterval(timerId);
 						pos = rightLimit;
 					}
@@ -154,7 +133,7 @@
 					$t._updatePos();
 				}, 10);
 			})
-			.mouseleave(function(e) {
+			.mouseleave(function (e) {
 				window.clearInterval(timerId);
 			});
 
@@ -162,61 +141,48 @@
 		$backward
 			.appendTo($t)
 			.hide()
-			.mouseenter(function(e) {
-				timerId = window.setInterval(function() {
+			.mouseenter(function (e) {
+				timerId = window.setInterval(function () {
 					pos += settings.carousels.speed;
 
 					if (pos >= leftLimit) {
-
 						window.clearInterval(timerId);
 						pos = leftLimit;
-
 					}
 
 					$t._updatePos();
 				}, 10);
 			})
-			.mouseleave(function(e) {
+			.mouseleave(function (e) {
 				window.clearInterval(timerId);
 			});
 
 		// Init.
-		$window.on('load', function() {
-
+		$window.on('load', function () {
 			reelWidth = $reel[0].scrollWidth;
 
 			if (browser.mobile) {
-
-				$reel
-					.css('overflow-y', 'hidden')
-					.css('overflow-x', 'scroll')
-					.scrollLeft(0);
+				$reel.css('overflow-y', 'hidden').css('overflow-x', 'scroll').scrollLeft(0);
 				$forward.hide();
 				$backward.hide();
-
-			}
-			else {
-
-				$reel
-					.css('overflow', 'visible')
-					.scrollLeft(0);
+			} else {
+				$reel.css('overflow', 'visible').scrollLeft(0);
 				$forward.show();
 				$backward.show();
-
 			}
 
 			$t._update();
 
-			$window.on('resize', function() {
-				reelWidth = $reel[0].scrollWidth;
-				$t._update();
-			}).trigger('resize');
-
+			$window
+				.on('resize', function () {
+					reelWidth = $reel[0].scrollWidth;
+					$t._update();
+				})
+				.trigger('resize');
 		});
 	});
 
-	(function($) {
-
+	(function ($) {
 		var $window = $(window),
 			$body = $('body'),
 			settings = {
@@ -232,68 +198,66 @@
 					volume: 1
 				}
 			};
-	
-		// ... (現有的代碼)
-	
-		$window.on('load', function() {
-			var audio = document.getElementById("backgroundMusic");
-			var playPauseButton = document.getElementById("playPauseButton");
-			var volumeUpButton = document.getElementById("volumeUpButton");
-       		var volumeDownButton = document.getElementById("volumeDownButton");
-			var prevButton = document.getElementById("prevButton");
-			var nextButton = document.getElementById("nextButton");
-			var songList = document.getElementById("songList");
-			var currentSongIndexSpan = document.getElementById("currentSongIndex");
-			var currentSongNameSpan = document.getElementById("currentSongName");
-			var progressBar = document.getElementById("progressBar");
-	        var currentTimeSpan = document.getElementById("currentTime");
-    	    var durationSpan = document.getElementById("duration");
 
+		// ... (現有的代碼)
+
+		$window.on('load', function () {
+			var audio = document.getElementById('backgroundMusic');
+			var playPauseButton = document.getElementById('playPauseButton');
+			var volumeUpButton = document.getElementById('volumeUpButton');
+			var volumeDownButton = document.getElementById('volumeDownButton');
+			var prevButton = document.getElementById('prevButton');
+			var nextButton = document.getElementById('nextButton');
+			var songList = document.getElementById('songList');
+			var currentSongIndexSpan = document.getElementById('currentSongIndex');
+			var currentSongNameSpan = document.getElementById('currentSongName');
+			var progressBar = document.getElementById('progressBar');
+			var currentTimeSpan = document.getElementById('currentTime');
+			var durationSpan = document.getElementById('duration');
 
 			var playlist = [
-				"./images/想和你看五月的晚霞.mp3",
-				"./images/從前說.mp3",
-				"./images/仗著.mp3",
-				"./images/刻在我心底的名字.mp3"
+				'./images/想和你看五月的晚霞.mp3',
+				'./images/從前說.mp3',
+				'./images/仗著.mp3',
+				'./images/刻在我心底的名字.mp3'
 				// 添加更多歌曲...
 			];
 
 			var currentSongIndex = 0;
 
 			for (var i = 0; i < playlist.length; i++) {
-				var option = document.createElement("option");
+				var option = document.createElement('option');
 				option.value = i;
-				option.text = "歌曲 " + (i + 1);
+				option.text = '歌曲 ' + (i + 1);
 				songList.appendChild(option);
 			}
 
-			playPauseButton.addEventListener("click", function () {
+			playPauseButton.addEventListener('click', function () {
 				if (audio.paused) {
 					audio.play();
-					playPauseButton.textContent = "暫停";
+					playPauseButton.textContent = '暫停';
 					updateSongInfo(); // 手動更新歌曲信息
 				} else {
 					audio.pause();
-					playPauseButton.textContent = "播放";
-					currentSongNameSpan.textContent = "歌曲"; // 將顯示的文字設為"歌曲"
+					playPauseButton.textContent = '播放';
+					currentSongNameSpan.textContent = '歌曲'; // 將顯示的文字設為"歌曲"
 				}
 			});
-			
 
-			prevButton.addEventListener("click", function () {
+			prevButton.addEventListener('click', function () {
 				currentSongIndex = (currentSongIndex - 1 + playlist.length) % playlist.length;
 				playSong();
 				updateSongInfo(); // 手動更新歌曲信息
 			});
-		
-			nextButton.addEventListener("click", function () {
+
+			nextButton.addEventListener('click', function () {
 				currentSongIndex = (currentSongIndex + 1) % playlist.length;
-				console.log("Next Song Index: " + currentSongIndex); // 添加這行除錯語句
+				console.log('Next Song Index: ' + currentSongIndex); // 添加這行除錯語句
 				playSong();
 				updateSongInfo(); // 手動更新歌曲信息
 			});
-			
-			songList.addEventListener("change", function () {
+
+			songList.addEventListener('change', function () {
 				currentSongIndex = parseInt(songList.value);
 				playSong();
 			});
@@ -301,74 +265,71 @@
 			function playSong() {
 				audio.src = playlist[currentSongIndex];
 				audio.load();
-				audio.addEventListener("canplay", function waitForCanPlay() {
+				audio.addEventListener('canplay', function waitForCanPlay() {
 					audio.play();
 					updateSongInfo();
-					audio.removeEventListener("canplay", waitForCanPlay);
+					audio.removeEventListener('canplay', waitForCanPlay);
 				});
 			}
-			
 
 			function updateSongInfo() {
-				currentSongIndexSpan.textContent = "歌曲 " + (currentSongIndex + 1) + " / " + playlist.length;
+				currentSongIndexSpan.textContent =
+					'歌曲 ' + (currentSongIndex + 1) + ' / ' + playlist.length;
 				songList.value = currentSongIndex;
-			
+
 				if (!audio.paused) {
-					currentSongNameSpan.textContent = "正在播放：" + getFileName(playlist[currentSongIndex]);
-				} 
+					currentSongNameSpan.textContent =
+						'正在播放：' + getFileName(playlist[currentSongIndex]);
+				}
 			}
-			
+
 			function getFileName(path) {
 				// 從路徑中提取文件名稱
-				var startIndex = path.lastIndexOf("/") + 1;
-				var endIndex = path.lastIndexOf(".");
+				var startIndex = path.lastIndexOf('/') + 1;
+				var endIndex = path.lastIndexOf('.');
 				return path.substring(startIndex, endIndex);
 			}
 
-			volumeUpButton.addEventListener("click", function () {
+			volumeUpButton.addEventListener('click', function () {
 				if (settings.music.volume < 1) {
 					settings.music.volume += 0.1; // 調整音量增加的步長
 					audio.volume = settings.music.volume;
 				}
 			});
-	
-			volumeDownButton.addEventListener("click", function () {
+
+			volumeDownButton.addEventListener('click', function () {
 				if (settings.music.volume > 0) {
 					settings.music.volume -= 0.1; // 調整音量降低的步長
 					audio.volume = settings.music.volume;
 				}
 			});
 
-			audio.addEventListener("timeupdate", function () {
+			audio.addEventListener('timeupdate', function () {
 				var currentTime = audio.currentTime;
 				var duration = audio.duration;
-	
+
 				// 更新進度條和時間
 				progressBar.value = (currentTime / duration) * 100;
 				currentTimeSpan.textContent = formatTime(currentTime);
 				durationSpan.textContent = formatTime(duration);
 			});
-	
-			progressBar.addEventListener("input", function () {
+
+			progressBar.addEventListener('input', function () {
 				// 當用戶拖動進度條時，設定音樂的播放時間
 				var seekTime = (progressBar.value / 100) * audio.duration;
 				audio.currentTime = seekTime;
 			});
-	
+
 			function formatTime(time) {
 				var minutes = Math.floor(time / 60);
 				var seconds = Math.floor(time % 60);
-				seconds = seconds < 10 ? "0" + seconds : seconds;
-				return minutes + ":" + seconds;
+				seconds = seconds < 10 ? '0' + seconds : seconds;
+				return minutes + ':' + seconds;
 			}
 
 			// 在頁面加載後手動播放音樂
 			audio.play();
 			updateSongInfo();
 		});
-	
 	})(jQuery);
-
-	
-
 })(jQuery);

@@ -1,9 +1,5 @@
-<!DOCTYPE HTML>
-<!--
-	Helios by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!doctype html>
+
 <html>
 	<head>
 		<title>Chia-Yu的個人網站</title>
@@ -11,70 +7,77 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets2/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets2/css/noscript.css" /></noscript>
-		
 	</head>
 
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
-
 			<!-- Header -->
-				<div id="header">
-
-					<!-- Inner -->
-						<div class="inner">
-							<header>
-								<h1><a id="logo">Hello I'm Chia Yu Chu</a></h1>
-								<hr />
-								<p>This is my self-introduction</p>
-							</header>
-							<footer>
-								<a href="#banner" class="button circled scrolly">Start</a>
-							</footer>
-						</div>
-
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="index.html">Home</a></li>
-								<!--
-								<li>
-									
-										<a href="portfolio.html">Anthor page</a>
-									<ul>
-										<li><a href="portfolio.html">作品集</a></li>
-										<li><a href="graduateschool.html">研究所</a></li>
-										<li><a href="researchdirection.html">目前研究方向</a></li>
-										<li><a href="resume.html">個人簡歷</a></li>
-										<li><a href="seniorproject.html">大學專題</a></li>
-										<li><a href="resumePDF.html">個人簡歷-履歷表</a></li>
-											
-									</ul>
-									
-								</li>
-								-->
-								<li><a href="portfolio.html">作品集</a></li>
-								<li><a href="graduateschool.html">研究所</a></li>
-								<li><a href="researchdirection.html">目前研究方向</a></li>
-								<!--<li><a href="resume.html">個人簡歷</a></li>-->
-								<li><a href="seniorproject.html">大學專題</a></li>
-								<li><a href="resumePDF.html">個人簡歷-履歷表</a></li>
-							</ul>
-						</nav>
-
+			<div id="header">
+				<!-- Inner -->
+				<div class="inner">
+					<header>
+						<h1><a id="logo">Hello I'm Chia Yu Chu</a></h1>
+						<hr />
+						<p>This is my self-introduction</p>
+					</header>
+					<footer>
+						<a href="#banner" class="button circled scrolly">Start</a>
+					</footer>
 				</div>
-				<audio id="backgroundMusic" src="./images/想和你看五月的晚霞.mp3" loop></audio>
-    			<button id="playPauseButton">播放/暫停</button>
-				<button id="volumeUpButton">增加音量</button>
-				<button id="volumeDownButton">降低音量</button>
-				<button id="prevButton">上一首</button>
-				<button id="nextButton">下一首</button>
-				<select id="songList"></select>
-				<span id="currentSongIndex"></span>
-				<span id="currentSongName"></span>
-				<input type="range" id="progressBar" value="0" max="100" step="1">
-   			 	<span id="currentTime">0:00</span> / <span id="duration">0:00</span>
-				<style>
-					span:not(#duration):not(#currentTime):not(#currentSongIndex):not(#currentSongName){
+
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<!--
+							<li>
+								
+									<a href="portfolio.html">Anthor page</a>
+								<ul>
+									<li><a href="portfolio.html">作品集</a></li>
+									<li><a href="graduateschool.html">研究所</a></li>
+									<li><a href="researchdirection.html">目前研究方向</a></li>
+									<li><a href="resume.html">個人簡歷</a></li>
+									<li><a href="seniorproject.html">大學專題</a></li>
+									<li><a href="resumePDF.html">個人簡歷-履歷表</a></li>
+										
+								</ul>
+								
+							</li>
+							-->
+						<li>
+							<a href="portfolio.html">作品集</a>
+							<ul>
+								<li><a href="seniorproject.html">大學專題</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="graduateschool.html">研究所</a>
+							<ul>
+								<li><a href="test.html">畢業照</a></li>
+							</ul>
+						</li>
+						<li><a href="researchdirection.html">目前研究方向</a></li>
+						<!--<li><a href="resume.html">個人簡歷</a></li>-->
+						<li><a href="resumePDF.html">個人簡歷-履歷表</a></li>
+					</ul>
+				</nav>
+			</div>
+			<audio id="backgroundMusic" src="./images/想和你看五月的晚霞.mp3" loop></audio>
+			<button id="playPauseButton">播放/暫停</button>
+			<button id="volumeUpButton">增加音量</button>
+			<button id="volumeDownButton">降低音量</button>
+			<button id="prevButton">上一首</button>
+			<button id="nextButton">下一首</button>
+			<select id="songList"></select>
+			<span id="currentSongIndex"></span>
+			<span id="currentSongName"></span>
+			<input type="range" id="progressBar" value="0" max="100" step="1" />
+			<span id="currentTime">0:00</span>
+			/
+			<span id="duration">0:00</span>
+			<style>
+				span:not(#duration):not(#currentTime):not(#currentSongIndex):not(#currentSongName) {
 					/* 顯示的文字不會被點擊 */
 					user-select: none;
 					cursor: default;
@@ -82,327 +85,390 @@
 					color: blanchedalmond;
 					position: absolute;
 					transition: 2s;
-					}
-				</style>
+				}
+			</style>
 			<!-- Banner -->
-				<section id="banner">
-					<header>
-						<h2>畢業於國立臺北護理健康大學-資訊管理系</h2>
-						<!--<p>
+			<section id="banner">
+				<header>
+					<h2>畢業於國立臺北護理健康大學-資訊管理系</h2>
+					<!--<p>
 							A (free) responsive site template by <a href="http://html5up.net">HTML5 UP</a>.
 							Built with HTML5/CSS3 and released under the <a href="http://html5up.net/license">CCA</a> license.
 						</p>-->
-					</header>
-				</section>
+				</header>
+			</section>
 
 			<!-- Carousel -->
-				<section class="carousel">
-					<div class="reel">
-
-						<article>
-							<a class="image featured2"><img src="images2/IMG_20171029_111444.jpg" height= 500px alt="" /></a>
-							<header>
-								<h3>這是高中青澀der我</h3>
-							</header>
-							<p>是讀電子科喔~~當時在準備考數位電子乙級的證照!!!</p>
-						</article>
-
-						<article>
-							<a class="image featured2"><img src="images2/Scan0014-1.jpg" height= 500px alt="" /></a>
-							<header>
-								<h3>高中職自走車競賽-第四名</h3>
-							</header>
-							<p>我還記得是暑假參加的，雖然只有第4名，但是受益良多!!!</p>
-						</article>
-
-						<article>
-							<a class="image featured2"><img src="images2/軍艦岩.jpg" height= 500px alt="" /></a>
-							<header>
-								<h3>大學時期與朋友一同爬山</h3>
-							</header>
-							<p>當時天起頗涼的，結果爬玩超熱的，終於登上軍艦岩啦!!!</p>
-						</article>
-
-						<article>
-							<a href="seniorproject.html" class="image featured2"><img src="images2/IMG_0990.JPG" alt="" /></a>
-							<header>
-								<h3><a href="#">大學專題競賽-系統組第二名</a></h3>
-							</header>
-							<p>運用區塊鏈加密機制建立符合FHIR格式之個人健康資料管理平台</p>
-						</article>
-
-						<article>
-							<a class="image featured2"><img src="images2/電子商務證照.jpg" alt="" /></a>
-							<header>
-								<h3><a>TQC電子商務-專業級</a></h3>
-							</header>
-							<p>在大學時期修"電子商務"課程，並考取證照。</p>
-						</article>
-
-						<article>
-							<a class="image featured2"><img src="images2/證照.jpg" alt="" /></a>
-							<header>
-								<h3><a>醫學資訊管理師證照</a></h3>
-							</header>
-							<p>在大學時期修"醫療資訊概論"課程並考取證照。</p>
-						</article>
-
-						<article>
-							<a class="image featured2"><img src="images2/研習證書.jpg" height= 500px alt="" /></a>
-							<header>
-								<h3><a>研習證書</a></h3>
-							</header>
-							<p>參加智能科技大人物技術發展講座之研習課程。</p>
-						</article>
-
-						<article>
-							<a class="image featured2"><img src="images2/LINE_ALBUM_學士服畢業照🎓_211218_6.jpg" height= 500 px></a>
-							<header>
-								<h3><a>畢業照</a></h3>
-							</header>
-							<p>終於要畢業了，我在正中間，我說蹲著的那個啦!!!</p>
-						</article>
-
-						<article>
-							<a class="image featured2"><img src="images2/IMG_1200.JPG" alt="" /></a>
-							<header>
-								<h3><a>參加2022醫療科技展</a></h3>
-							</header>
-							<p>去南港展覽館看醫療科技展，看到好多未來醫療發展趨勢!!!</p>
-						</article>
-
-						<article>
-							<a class="image featured2"><img src="images2/圓桌會議.jpg" alt="" /></a>
-							<header>
-								<h3><a>圓桌會議-交流活動</a></h3>
-							</header>
-							<p>了解醫療AI服務上雲與數位轉型發展趨勢及台灣醫療現況改革之困境。</p>
-						</article>
-
-						<article>
-							<a class="image featured2"><img src="images2/IMG_1873.JPG" alt="" /></a>
-							<header>
-								<h3><a>2023-APAMI</a></h3>
-							</header>
-							<p>參加2023-AeHIN亞太醫療資訊技術合作研討會。</p>
-						</article>
-
-					</div>
-				</section>
-
-			<!-- Main -->
-				<div class="wrapper style2">
-
-					<article id="main" class="container special">
-						<a class="image featured2"><img src="images2/貓貓高清.jpg" width= 100px alt="" /></a>
+			<section class="carousel">
+				<div class="reel">
+					<article>
+						<a class="image featured2">
+							<img src="images2/IMG_20171029_111444.jpg" height="500px" alt="" />
+						</a>
 						<header>
-							<h2><a>目前就讀國立臺北護理健康大學-研究所</a></h2>
-							<p>
-								研究方向:以ArciMate建模碳足跡之資訊系統
-							</p>
+							<h3>這是高中青澀der我</h3>
 						</header>
-						<p>
-							感謝教導我的老師們，因為他們都很專業、熱心和負責，不但教導我們專業知識和技能，還鼓勵我們參加各種競賽、實習和交流活動，讓我們有更多的學習機會和成長空間。
-						在大學裡，我很享受這個系所的學習氛圍，因為這裡的同學們都很友善、合作和互助，我們可以一起討論課程、做專題、考證照、分享心得，也可以一起參加社團、志工、活動等，讓我們的大學生活更豐富多彩。
-						我會期待這個系所的畢業出路，因為這裡的畢業生都有在各種資訊化的工商業機構或醫療保健機構從事相關的工作，或者是追求更高的學術成就。
-						</p>
-						<footer>
-							<a href="researchdirection.html" class="button">目前研究題目 Continue Reading</a>
-						</footer>
+						<p>是讀電子科喔~~當時在準備考數位電子乙級的證照!!!</p>
 					</article>
 
+					<article>
+						<a class="image featured2">
+							<img src="images2/Scan0014-1.jpg" height="500px" alt="" />
+						</a>
+						<header>
+							<h3>高中職自走車競賽-第四名</h3>
+						</header>
+						<p>我還記得是暑假參加的，雖然只有第4名，但是受益良多!!!</p>
+					</article>
+
+					<article>
+						<a class="image featured2">
+							<img src="images2/軍艦岩.jpg" height="500px" alt="" />
+						</a>
+						<header>
+							<h3>大學時期與朋友一同爬山</h3>
+						</header>
+						<p>當時天起頗涼的，結果爬玩超熱的，終於登上軍艦岩啦!!!</p>
+					</article>
+
+					<article>
+						<a href="seniorproject.html" class="image featured2">
+							<img
+								src="images2/IMG_0990.JPG"
+								alt=""
+								style="max-width: 100%; height: auto" />
+						</a>
+						<header>
+							<h3><a href="#">大學專題競賽-系統組第二名</a></h3>
+						</header>
+						<p>運用區塊鏈加密機制建立符合FHIR格式之個人健康資料管理平台</p>
+					</article>
+
+					<article>
+						<a class="image featured2"><img src="images2/電子商務證照.jpg" alt="" /></a>
+						<header>
+							<h3><a>TQC電子商務-專業級</a></h3>
+						</header>
+						<p>在大學時期修"電子商務"課程，並考取證照。</p>
+					</article>
+
+					<article>
+						<a class="image featured2"><img src="images2/證照.jpg" alt="" /></a>
+						<header>
+							<h3><a>醫學資訊管理師證照</a></h3>
+						</header>
+						<p>在大學時期修"醫療資訊概論"課程並考取證照。</p>
+					</article>
+
+					<article>
+						<a class="image featured2">
+							<img src="images2/研習證書.jpg" height="500px" alt="" />
+						</a>
+						<header>
+							<h3><a>研習證書</a></h3>
+						</header>
+						<p>參加智能科技大人物技術發展講座之研習課程。</p>
+					</article>
+
+					<article>
+						<a class="image featured2">
+							<img
+								src="images2/LINE_ALBUM_學士服畢業照🎓_211218_6.jpg"
+								height="500"
+								px />
+						</a>
+						<header>
+							<h3><a>畢業照</a></h3>
+						</header>
+						<p>終於要畢業了，我在正中間，我說蹲著的那個啦!!!</p>
+					</article>
+
+					<article>
+						<a class="image featured2"><img src="images2/IMG_1200.JPG" alt="" /></a>
+						<header>
+							<h3><a>參加2022醫療科技展</a></h3>
+						</header>
+						<p>去南港展覽館看醫療科技展，看到好多未來醫療發展趨勢!!!</p>
+					</article>
+
+					<article>
+						<a class="image featured2"><img src="images2/圓桌會議.jpg" alt="" /></a>
+						<header>
+							<h3><a>圓桌會議-交流活動</a></h3>
+						</header>
+						<p>了解醫療AI服務上雲與數位轉型發展趨勢及台灣醫療現況改革之困境。</p>
+					</article>
+
+					<article>
+						<a class="image featured2"><img src="images2/IMG_1873.JPG" alt="" /></a>
+						<header>
+							<h3><a>2023-APAMI</a></h3>
+						</header>
+						<p>參加2023-AeHIN亞太醫療資訊技術合作研討會。</p>
+					</article>
 				</div>
+			</section>
+
+			<!-- Main -->
+			<div class="wrapper style2">
+				<article id="main" class="container special">
+					<a class="image featured2">
+						<img src="images2/貓貓高清.jpg" width="100px" alt="" />
+					</a>
+					<header>
+						<h2><a>目前就讀國立臺北護理健康大學-研究所</a></h2>
+						<p>研究方向:以ArciMate建模碳足跡之資訊系統</p>
+					</header>
+					<p>
+						感謝教導我的老師們，因為他們都很專業、熱心和負責，不但教導我們專業知識和技能，還鼓勵我們參加各種競賽、實習和交流活動，讓我們有更多的學習機會和成長空間。
+						在大學裡，我很享受這個系所的學習氛圍，因為這裡的同學們都很友善、合作和互助，我們可以一起討論課程、做專題、考證照、分享心得，也可以一起參加社團、志工、活動等，讓我們的大學生活更豐富多彩。
+						我會期待這個系所的畢業出路，因為這裡的畢業生都有在各種資訊化的工商業機構或醫療保健機構從事相關的工作，或者是追求更高的學術成就。
+					</p>
+					<footer>
+						<a href="researchdirection.html" class="button">
+							目前研究題目 Continue Reading
+						</a>
+					</footer>
+				</article>
+			</div>
 
 			<!-- Features -->
-				<div class="wrapper style1">
-
-					<section id="features" class="container special">
-						<header>
-							<h2>大學及研究所的作品</h2>
-							<p>每個都可以點開喔~~~</p>
-						</header>
-						<div class="row">
-
-							<article class="col-4 col-12-mobile special">
-								<a href="https://youtu.be/nLY0qUMlSWY" class="image featured"><img src="images/pcshop.jpg" width=300px alt="" /></a>
-								<header>
-									<h3><a>個人電腦商城</a></h3>
-								</header>
-								<p>
-									使用VirtualBox作為虛擬機軟體，環境為Linux CentOS 8，安裝Wordpress，並利用其架設網站(Apache)，
+			<div class="wrapper style1">
+				<section id="features" class="container special">
+					<header>
+						<h2>大學及研究所的作品</h2>
+						<p>每個都可以點開喔~~~</p>
+					</header>
+					<div class="row">
+						<article class="col-4 col-12-mobile special">
+							<a href="https://youtu.be/nLY0qUMlSWY" class="image featured">
+								<img src="images/pcshop.jpg" width="300px" height="275px" alt="" />
+							</a>
+							<header>
+								<h3><a>個人電腦商城</a></h3>
+							</header>
+							<p>
+								使用VirtualBox作為虛擬機軟體，環境為Linux CentOS
+								8，安裝Wordpress，並利用其架設網站(Apache)，
 								需要填寫網站的名稱、管理員帳號、密碼、電子郵件等資訊設定，可以選擇合適的佈景主題、外掛程式、
 								功能選項等，打造一個類似PChome的線上購物平台。WordPress的後台管理介面中，可以新增商品、分類
 								、頁面、文章等內容，並設定適當的價格、庫存、運費、付款方式等資訊，在WordPress的後台管理介面中
 								，測試我的網站的功能和效能，我在虛擬機中設定網路連線，並將我的網站發佈到網際網路上，讓其他人可
 								以訪問和購買我的商品和服務。如要更新網站，只需在資料庫(MariaDB)新增即可。
-								</p>
-								<li><a href="https://youtu.be/nLY0qUMlSWY" class="button">作品影片</a></li>
-							</article>
+							</p>
+							<li>
+								<a href="https://youtu.be/nLY0qUMlSWY" class="button">作品影片</a>
+							</li>
+						</article>
 
-							<article class="col-4 col-12-mobile special">
-								<a href="lesson_CNN.html" class="image featured"><img src="images/CT.jpeg" width=300px height=234px alt="" /></a>
-								<header>
-									<h3><a>基於卷積神經網路於肺炎辨識之研究</a></h3>
-								</header>
-								<p>
-									使用卷積神經網路(Convolutional Neural Networks, CNN)對肺部X光之影像進行處理並判斷是否為感染肺炎進行辨認與探討。
-								美國國家衛生院(NIH)胸腔X光影像資料集，2017年發布，51648張影像，包含15個類別 (14個疾病及1個未發現疾病類別)，
+						<article class="col-4 col-12-mobile special">
+							<a href="lesson_CNN.html" class="image featured">
+								<img src="images/CT.jpeg" width="300px" height="275px" alt="" />
+							</a>
+							<header>
+								<h3><a>基於卷積神經網路於肺炎辨識之研究</a></h3>
+							</header>
+							<p>
+								使用卷積神經網路(Convolutional Neural Networks,
+								CNN)對肺部X光之影像進行處理並判斷是否為感染肺炎進行辨認與探討。
+								美國國家衛生院(NIH)胸腔X光影像資料集，2017年發布，51648張影像，包含15個類別
+								(14個疾病及1個未發現疾病類別)，
 								將資料集依照80:20比例進行分割，分割後驗證集為41,318張張，訓練集為10,331張，對原始影像在合理的範圍內進行翻轉、
 								旋轉、縮放等處理，增加資料量、避免過度擬合，架構是參考DenseNet進行設計，其優點包含緩解梯度消失問題，加強特徵傳遞
 								鼓勵特徵重用，減少參數數量，提高準確率，降低計算成本。
-								</p>
-								<li><a href="https://youtu.be/1GoanpLw658" class="button">作品影片</a></li>
-								<li><a href="https://github.com/andy32252/LungImage_deduction" class="button">GitHub</a>
-								<li><a href="lesson_CNN.html" class="button">作業報告</a>	
-							</article>
+							</p>
+							<li>
+								<a href="https://youtu.be/1GoanpLw658" class="button">作品影片</a>
+							</li>
+							<li>
+								<a
+									href="https://github.com/andy32252/LungImage_deduction"
+									class="button">
+									GitHub
+								</a>
+							</li>
+							<li><a href="lesson_CNN.html" class="button">作業報告</a></li>
+						</article>
 
-							<article class="col-4 col-12-mobile special">
-								<a href="seniorproject.html" style="display: block; text-align: center; padding: 5px;">
-									<img src="images2/BC_PHR.png" width="200px" height="220px" alt="" >
-								</a>								
-								<header>
-									<br>
-									<br>
-									<h3><a>運用區塊鏈加密機制建立符合FHIR格式之個人健康資料管理平台</a></h3>
-								</header>
-								<p>
-									使用區塊鏈技術來保護資料的安全及隱私性，並以區塊鏈有不可竄改、公開透明、去中心化的特性，來進行驗證與實做個人健康管理APP。
-									而在資料選擇及格式上，我們選擇健康存摺資料，將原本XML格式轉換成符合國際標準的FHIR格式進行編碼，因為FHIR格式的個人資料可以在不同醫療單位進行交換，
-									像是個人健康檢查、診所看病、醫院住院等相關資料，都可以整合在一起儲存並做使用，達成互操作性。在實作上，我們建立了個人健康紀錄管理的應用程式，
-									並且整合健康存摺系統，達到方便、個人化的可使用性。
-								</p>
-								<li><a href="https://github.com/andy32252/BlockChain-FHIR-App" class="button">GitHub</a>
-								<li><a href="seniorproject.html" class="button">專題報告</a>	
-							</article>
-						</div>
-					</section>
-
-				</div>
+						<article class="col-4 col-12-mobile special">
+							<a
+								href="seniorproject.html"
+								style="display: block; text-align: center; padding: 5px">
+								<img src="images2/BC_PHR.png" width="200px" height="255px" alt="" />
+							</a>
+							<header>
+								<br />
+								<br />
+								<h3>
+									<a>運用區塊鏈加密機制建立符合FHIR格式之個人健康資料管理平台</a>
+								</h3>
+							</header>
+							<p>
+								使用區塊鏈技術來保護資料的安全及隱私性，並以區塊鏈有不可竄改、公開透明、去中心化的特性，來進行驗證與實做個人健康管理APP。
+								而在資料選擇及格式上，我們選擇健康存摺資料，將原本XML格式轉換成符合國際標準的FHIR格式進行編碼，因為FHIR格式的個人資料可以在不同醫療單位進行交換，
+								像是個人健康檢查、診所看病、醫院住院等相關資料，都可以整合在一起儲存並做使用，達成互操作性。在實作上，我們建立了個人健康紀錄管理的應用程式，
+								並且整合健康存摺系統，達到方便、個人化的可使用性。
+							</p>
+							<li>
+								<a
+									href="https://github.com/andy32252/BlockChain-FHIR-App"
+									class="button">
+									GitHub
+								</a>
+							</li>
+							<li><a href="seniorproject.html" class="button">專題報告</a></li>
+						</article>
+					</div>
+				</section>
+			</div>
 
 			<!-- Footer -->
-				<div id="footer">
-					<div class="container">
-						
-						<div class="row">
-								<div class="col-8">
+			<div id="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-8">
+							<!-- Contact -->
+							<section class="contact">
+								<header>
+									<h3>這是我利用閒暇之餘，所打造的網站~~</h3>
+								</header>
+								<p>想要了解我的話，下面有一些聯絡方式喔~~~!!!</p>
+								<ul class="icons">
+									<li>
+										<a
+											href="https://www.facebook.com/profile.php?id=100002902433189"
+											class="icon brands fa-facebook-f">
+											<span class="label">Facebook</span>
+										</a>
+									</li>
+									<li>
+										<a
+											href="https://www.instagram.com/mie_mie1111/"
+											class="icon brands fa-instagram">
+											<span class="label">Instagram</span>
+										</a>
+									</li>
+									<li>
+										<a
+											href="https://github.com/andy32252"
+											class="icon brands alt fa-github">
+											<span class="label">GitHub</span>
+										</a>
+									</li>
+									<li>
+										<a
+											href="https://www.linkedin.com/in/%E5%98%8Eu-undefined-5a634a2a4/"
+											class="icon brands fa-linkedin-in">
+											<span class="label">Linkedin</span>
+										</a>
+									</li>
+								</ul>
+							</section>
+						</div>
 
-								<!-- Contact -->
-									<section class="contact">
-										<header>
-											<h3>這是我利用閒暇之餘，所打造的網站~~</h3>
-										</header>
-										<p>想要了解我的話，下面有一些聯絡方式喔~~~!!!</p>
-										<ul class="icons">
-											<li><a href="https://www.facebook.com/profile.php?id=100002902433189" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-											<li><a href="https://www.instagram.com/mie_mie1111/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-											<li><a href="https://github.com/andy32252" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-											<li><a href="https://www.linkedin.com/in/%E5%98%8Eu-undefined-5a634a2a4/" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
-										</ul>
-									</section>
-								</div>
+						<div class="col-3">
+							<section class="latest-updates">
+								<header>
+									<h3>最新更新</h3>
+								</header>
+								<style>
+									p {
+										text-indent: 20px; /* 設置縮排的大小，可以根據需要調整 */
+									}
+								</style>
+								<p>2024/1/15 : 新增修改資料庫。</p>
+								<p>2023/12/27 : 修改履歷。</p>
+								<p>2024/06/30 : 大修網頁。</p>
+								<!-- 在這裡加入每次更新的內容，按照需要自行擴充 -->
+							</section>
+						</div>
 
-								<div class="col-3">	
-									<section class="latest-updates">
-										<header>
-											<h3>最新更新</h3>
-										</header>
-										<style>
-											p {
-												text-indent: 20px; /* 設置縮排的大小，可以根據需要調整 */
-											}
-										</style>
-										<p>2024/1/15 : 新增修改資料庫。</p>
-										<p>2023/12/27 : 修改履歷。</p>
-										<!-- 在這裡加入每次更新的內容，按照需要自行擴充 -->
-									</section>
-								</div>
-
-									<div class="copyright">
-										<ul class="menu">
-											<li>&copy; 這是我本人做的</li><li>Design: <a>by Chia-Yu</a></li>
-										</ul>
-									</div>
-
-
-								</div>
-
+						<div class="copyright">
+							<ul class="menu">
+								<li>&copy; 這是我本人做的</li>
+								<li>
+									Design:
+									<a>by Chia-Yu</a>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
-			
+			</div>
 		</div>
-		
+
 		<!-- Scripts -->
-			<script src="assets2/js/jquery.min.js"></script>
-			<script src="assets2/js/jquery.dropotron.min.js"></script>
-			<script src="assets2/js/jquery.scrolly.min.js"></script>
-			<script src="assets2/js/jquery.scrollex.min.js"></script>
-			<script src="assets2/js/browser.min.js"></script>
-			<script src="assets2/js/breakpoints.min.js"></script>
-			<script src="assets2/js/util.js"></script>
-			<script src="assets2/js/main.js"></script>
-			<script src="assets2/js/index.js"></script>
-			<!--<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+		<script src="assets2/js/jquery.min.js"></script>
+		<script src="assets2/js/jquery.dropotron.min.js"></script>
+		<script src="assets2/js/jquery.scrolly.min.js"></script>
+		<script src="assets2/js/jquery.scrollex.min.js"></script>
+		<script src="assets2/js/browser.min.js"></script>
+		<script src="assets2/js/breakpoints.min.js"></script>
+		<script src="assets2/js/util.js"></script>
+		<script src="assets2/js/main.js"></script>
+		<script src="assets2/js/index.js"></script>
+		<!--<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
 			<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
 			<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js"></script>
 			-->
-			<script>
-				// 設置隨機出現的文字
-				var arr = ["關於感情問題，我一律建議分手!!!","每天對自己說你是最棒的!!!",
-				"只要路是對的，就不怕路遠!!!","研究發現，生日過越多的人就越老!!!",
-				"不完美的生活裡，找到完整的自己!!!","女生說喜歡乾淨的男生，其實是喜歡長得帥的!!!",
-				"努力不為了誰，只為不錯過更好的自己!!!","當你懷疑人生的時候，不要懷疑，這就是你的人生!!!","不為失敗找藉口，要為成功找方法!!!","沒有負能量，哪來正能量!!!"
-				,"明明可以靠顏值吃飯，偏偏卻要工作，我不知道明明是誰，反正我是偏偏...","小時候媽媽說，乖一點才交得到女朋友，後來發現，不乖可以同時交好幾個!!!","常喝珍奶是不好的，如果戒不掉一定是這裡有賣!!!"]
-				document.onclick = function(x){
+		<script>
+			// 設置隨機出現的文字
+			var arr = [
+				'關於感情問題，我一律建議分手!!!',
+				'每天對自己說你是最棒的!!!',
+				'只要路是對的，就不怕路遠!!!',
+				'研究發現，生日過越多的人就越老!!!',
+				'不完美的生活裡，找到完整的自己!!!',
+				'女生說喜歡乾淨的男生，其實是喜歡長得帥的!!!',
+				'努力不為了誰，只為不錯過更好的自己!!!',
+				'當你懷疑人生的時候，不要懷疑，這就是你的人生!!!',
+				'不為失敗找藉口，要為成功找方法!!!',
+				'沒有負能量，哪來正能量!!!',
+				'明明可以靠顏值吃飯，偏偏卻要工作，我不知道明明是誰，反正我是偏偏...',
+				'小時候媽媽說，乖一點才交得到女朋友，後來發現，不乖可以同時交好幾個!!!',
+				'常喝珍奶是不好的，如果戒不掉一定是這裡有賣!!!'
+			];
+			document.onclick = function (x) {
 				// 元素節點
-				var span1 = document.createElement("span")
+				var span1 = document.createElement('span');
 				// 當前滑鼠位置
-				span1.style.left = x.clientX + "px"
-				span1.style.top = x.clientY + "px"
+				span1.style.left = x.clientX + 'px';
+				span1.style.top = x.clientY + 'px';
 				// 找arr隨機文字
-				span1.innerHTML = arr[Math.floor(Math.random()*arr.length)]
+				span1.innerHTML = arr[Math.floor(Math.random() * arr.length)];
 				// 動畫效果
-				setTimeout(function(){
-				span1.style.opacity = "1"
-				span1.style.transform = "translateY(-100px)"
-				},100)
-				setTimeout(function(){
-				span1.style.opacity = "0"
-				span1.style.transform = "translate(-100px,-100px)"
-				},1500)
+				setTimeout(function () {
+					span1.style.opacity = '1';
+					span1.style.transform = 'translateY(-100px)';
+				}, 100);
+				setTimeout(function () {
+					span1.style.opacity = '0';
+					span1.style.transform = 'translate(-100px,-100px)';
+				}, 1500);
 				// 清掉文字
-				var chi = document.getElementsByClassName("span")
-				for(var i = 0;i<chi.length;i++){
-				if(chi[i].style.opacity === "0"){
-				document.body.removeChild(chi[i])
-				}
+				var chi = document.getElementsByClassName('span');
+				for (var i = 0; i < chi.length; i++) {
+					if (chi[i].style.opacity === '0') {
+						document.body.removeChild(chi[i]);
+					}
 				}
 				// span加到body
-				document.body.appendChild(span1)
-				}
-			</script>
-			<script type="module">
-				// Import the functions you need from the SDKs you need
-				import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-				import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
-				// TODO: Add SDKs for Firebase products that you want to use
-				// https://firebase.google.com/docs/web/setup#available-libraries
-			  
-				// Your web app's Firebase configuration
-				// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-				const firebaseConfig = {
-				  apiKey: "AIzaSyAOncDxiVdxErSR8IGy2bOKyBYcKJ2o_7E",
-				  authDomain: "pagetest-20568.firebaseapp.com",
-				  projectId: "pagetest-20568",
-				  storageBucket: "pagetest-20568.appspot.com",
-				  messagingSenderId: "813105388025",
-				  appId: "1:813105388025:web:0cd0a15a8e2676883a0528",
-				  measurementId: "G-WFVHF0FV22"
-				};
-			  
-				// Initialize Firebase
-				const app = initializeApp(firebaseConfig);
-				const analytics = getAnalytics(app);
-			</script>
+				document.body.appendChild(span1);
+			};
+		</script>
+		<script type="module">
+			// Import the functions you need from the SDKs you need
+			import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+			import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js';
+			// TODO: Add SDKs for Firebase products that you want to use
+			// https://firebase.google.com/docs/web/setup#available-libraries
+
+			// Your web app's Firebase configuration
+			// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+			// Initialize Firebase
+			const app = initializeApp(firebaseConfig);
+			const analytics = getAnalytics(app);
+		</script>
 	</body>
 </html>

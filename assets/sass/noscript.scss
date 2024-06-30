@@ -13,16 +13,16 @@
 
 /* Banner */
 
-	#banner {
-		body.is-preload & {
-			&:after {
-				opacity: 0.85;
-			}
+#banner {
+	body.is-preload & {
+		&:after {
+			opacity: 0.85;
+		}
 
-			> .inner {
-				@include vendor('filter', 'none');
-				@include vendor('transform', 'none');
-				opacity: 1;
-			}
+		> .inner {
+			@include vendor('filter', 'none');
+			@include vendor('transform', 'none');
+			opacity: 1;
 		}
 	}
+}

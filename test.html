@@ -1,0 +1,505 @@
+<!doctype html>
+<html>
+	<head>
+        <title>Graduation Photos</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets2/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets2/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="lightbox2/lightbox2-2.11.4/dist/css/lightbox.min.css" />		
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+			<!-- Header -->
+			<div id="header">
+				<!-- Inner -->
+				<div class="inner">
+					<header>
+						<h1><a id="logo">研究所畢業啦!!!</a></h1>
+						<hr />
+					</header>
+					<footer>
+						<a href="#banner" class="button circled scrolly">Start</a>
+					</footer>
+				</div>
+
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<!--
+							<li>
+								
+									<a href="portfolio.html">Anthor page</a>
+								<ul>
+									<li><a href="portfolio.html">作品集</a></li>
+									<li><a href="graduateschool.html">研究所</a></li>
+									<li><a href="researchdirection.html">目前研究方向</a></li>
+									<li><a href="resume.html">個人簡歷</a></li>
+									<li><a href="seniorproject.html">大學專題</a></li>
+									<li><a href="resumePDF.html">個人簡歷-履歷表</a></li>
+										
+								</ul>
+								
+							</li>
+							-->
+						<li>
+							<a href="portfolio.html">作品集</a>
+							<ul>
+								<li><a href="seniorproject.html">大學專題</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="graduateschool.html">研究所</a>
+							<ul>
+								<li><a href="test.html">畢業照</a></li>
+							</ul>
+						</li>
+						<li><a href="researchdirection.html">目前研究方向</a></li>
+						<!--<li><a href="resume.html">個人簡歷</a></li>-->
+						<li><a href="resumePDF.html">個人簡歷-履歷表</a></li>
+					</ul>
+				</nav>
+			</div>
+
+            <section id="banner">
+				<header>
+                    <h2 style="text-align: center">研究所畢業啦!!!</h2>
+                </header>
+			</section>
+			
+            <style>
+                body {
+                    margin: 0;
+                    font-family: 'Source Sans Pro', sans-serif;
+                    background-color: #f0f0f0;
+                }
+    
+                .photo-container {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 20px;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                }
+    
+                .photo-container img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 5px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    transition: transform 0.2s ease-in-out;
+                }
+    
+                .photo-container img:hover {
+                    transform: scale(1.05);
+                }
+    
+                #footer {
+                    background-color: #333;
+                    color: #fff;
+                    padding: 20px 0;
+                    text-align: center;
+                }
+    
+                .icons {
+                    list-style-type: none;
+                    padding: 0;
+                }
+    
+                .icons li {
+                    display: inline-block;
+                    margin-right: 10px;
+                }
+    
+                .icons li a {
+                    color: #fff;
+                    font-size: 24px;
+                }
+				span:not(#duration):not(#currentTime):not(#currentSongIndex):not(#currentSongName) {
+					/* 顯示的文字不會被點擊 */
+					user-select: none;
+					cursor: default;
+					font-size: 20px;
+					color: blanchedalmond;
+					position: absolute;
+					transition: 2s;
+				}
+            </style>
+			<section class="carousel">
+				<div class="reel">
+					<article>
+						<a class="image featured">
+							<img src="images2/IMG_1895.JPG" alt="" />
+						</a>
+						<header>
+							<h3>畢業團照</h3>
+						</header>
+						<p>終於畢業啦!!!</p>
+					</article>
+
+					<article>
+						<a class="image featured">
+							<img src="images2/LINE_ALBUM_畢業照_231215_3.jpg" alt="" />
+						</a>
+						<header>
+							<h3>畢業團照</h3>
+						</header>
+						<p>大家之後都要好好的阿阿阿阿!!!</p>
+					</article>
+
+					<article>
+						<a class="image featured">
+							<img src="images2/LINE_ALBUM_畢業照_231215_4.jpg" alt="" />
+						</a>
+						<header>
+							<h3>畢業團照</h3>
+						</header>
+						<p>等等，484有人還沒畢業就混進來阿!!!</p>
+					</article>
+					<article>
+						<a class="image featured">
+							<img src="images/走廊1.JPEG" alt="" />
+						</a>
+						<header>
+							<h3>畢業團照</h3>
+						</header>
+						<p>原來走廊也可以拍這麼美!!!</p>
+					</article>
+                    <article>
+						<a class="image featured">
+							<img src="images/走廊2.JPEG" alt="" />
+						</a>
+						<header>
+							<h3>畢業團照</h3>
+						</header>
+						<p>地板很涼~~</p>
+					</article>
+                    <article>
+						<a class="image featured">
+							<img src="images/走廊3.JPEG" alt="" />
+						</a>
+						<header>
+							<h3>畢業團照</h3>
+						</header>
+						<p>大家都很會擺pose!!!</p>
+					</article>
+                    <article>
+						<a class="image featured">
+							<img src="images/走廊4.JPEG" alt="" />
+						</a>
+						<header>
+							<h3>畢業團照</h3>
+						</header>
+						<p>大家畢業快樂!!!</p>
+					</article>
+                    <article>
+						<a class="image featured">
+							<img src="images/走廊6.JPEG" alt="" />
+						</a>
+						<header>
+							<h3>畢業團照</h3>
+						</header>
+						<p>有人笑到沒眼睛!!!</p>
+					</article>
+                    <article>
+						<a class="image featured">
+							<img src="images/走廊7.JPEG" alt="" />
+						</a>
+						<header>
+							<h3>畢業團照</h3>
+						</header>
+						<p>有人笑到沒眼睛!!!</p>
+					</article>
+                    <article>
+						<a class="image featured">
+							<img src="images/操場1.JPEG" alt="" />
+						</a>
+						<header>
+							<h3>畢業團照</h3>
+						</header>
+						<p>當天超級熱的啦!!!</p>
+					</article>
+                    <article>
+						<a class="image featured">
+							<img src="images/操場2.JPEG" alt="" />
+						</a>
+						<header>
+							<h3>畢業團照</h3>
+						</header>
+						<p>嚇死，我還以為有人比不雅手勢!!!</p>
+					</article>
+                    <article>
+						<a class="image featured">
+							<img src="images/操場3.JPEG" alt="" />
+						</a>
+						<header>
+							<h3>畢業團照</h3>
+						</header>
+						<p>怎麼有學弟!!!</p>
+					</article>
+                    <article>
+						<a class="image featured">
+							<img src="images/操場8.JPEG" alt="" />
+						</a>
+						<header>
+							<h3>畢業團照</h3>
+						</header>
+						<p>研究所end~~</p>
+					</article>
+				</div>
+            </section>
+
+				<div class="row">
+					<div class="photo-container">
+						<a
+							class="example-image-link"
+							href="images/走廊1.JPEG"
+							data-lightbox="example-set"
+							data-title="Photo 1">
+							<img class="example-image" src="images/走廊1.JPEG" alt="" />
+						</a>
+						<a
+							class="example-image-link"
+							href="images/走廊2.JPEG"
+							data-lightbox="example-set"
+							data-title="Photo 2">
+							<img class="example-image" src="images/走廊2.JPEG" alt="" />
+						</a>
+						<a
+							class="example-image-link"
+							href="images/走廊3.JPEG"
+							data-lightbox="example-set"
+							data-title="Photo 3">
+							<img class="example-image" src="images/走廊3.JPEG" alt="" />
+						</a>
+						<a
+							class="example-image-link"
+							href="images/走廊4.JPEG"
+							data-lightbox="example-set"
+							data-title="Photo 4">
+							<img class="example-image" src="images/走廊4.JPEG" alt="" />
+						</a>
+						<a
+							class="example-image-link"
+							href="images/走廊6.JPEG"
+							data-lightbox="example-set"
+							data-title="Photo 6">
+							<img class="example-image" src="images/走廊6.JPEG" alt="" />
+						</a>
+						<a
+							class="example-image-link"
+							href="images/走廊7.JPEG"
+							data-lightbox="example-set"
+							data-title="Photo 7">
+							<img class="example-image" src="images/走廊7.JPEG" alt="" />
+						</a>
+						<a
+							class="example-image-link"
+							href="images/走廊8.JPEG"
+							data-lightbox="example-set"
+							data-title="Photo 8">
+							<img class="example-image" src="images/走廊8.JPEG" alt="" />
+						</a>
+						<a
+							class="example-image-link"
+							href="images/走廊9.JPEG"
+							data-lightbox="example-set"
+							data-title="Photo 9">
+							<img class="example-image" src="images/走廊9.JPEG" alt="" />
+						</a>
+
+						<a
+							class="example-image-link"
+							href="images/走廊10.JPEG"
+							data-lightbox="example-set"
+							data-title="Photo 10">
+							<img class="example-image" src="images/走廊10.JPEG" alt="" />
+						</a>
+						<a
+							class="example-image-link"
+							href="images/走廊11.JPG"
+							data-lightbox="example-set"
+							data-title="Photo 11">
+							<img class="example-image" src="images/走廊11.JPG" alt="" />
+						</a>
+						<a
+							class="example-image-link"
+							href="images/操場1.JPEG"
+							data-lightbox="example-set"
+							data-title="Photo 12">
+							<img class="example-image" src="images/操場1.JPEG" alt="" />
+						</a>
+						<a
+							class="example-image-link"
+							href="images/操場2.JPEG"
+							data-lightbox="example-set"
+							data-title="Photo 13">
+							<img class="example-image" src="images/操場2.JPEG" alt="" />
+						</a>
+						<a
+							class="example-image-link"
+							href="images/操場3.JPEG"
+							data-lightbox="example-set"
+							data-title="Photo 14">
+							<img class="example-image" src="images/操場3.JPEG" alt="" />
+						</a>
+						<a
+							class="example-image-link"
+							href="images/操場8.JPEG"
+							data-lightbox="example-set"
+							data-title="Photo 19">
+							<img class="example-image" src="images/操場8.JPEG" alt="" />
+						</a>
+						<!-- Add more photos here -->
+					</div>
+					<div class="photo-container">
+						<a
+							class="example-image-link"
+							href="images/操場4.JPEG"
+							data-lightbox="example-set2"
+							data-title="Photo 15">
+							<img class="example-image" src="images/操場4.JPEG" alt="" />
+						</a>
+						<a
+							class="example-image-link"
+							href="images/操場5.JPEG"
+							data-lightbox="example-set2"
+							data-title="Photo 16">
+							<img class="example-image" src="images/操場5.JPEG" alt="" />
+						</a>
+						<a
+							class="example-image-link"
+							href="images/操場6.JPEG"
+							data-lightbox="example-set2"
+							data-title="Photo 17">
+							<img class="example-image" src="images/操場6.JPEG" alt="" />
+						</a>
+						<a
+							class="example-image-link"
+							href="images/操場7.JPEG"
+							data-lightbox="example-set2"
+							data-title="Photo 18">
+							<img class="example-image" src="images/操場7.JPEG" alt="" />
+						</a>
+					</div>
+					<!-- Add more photos here -->
+				</div>
+			</section>
+
+			<!-- Footer -->
+			<div id="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<!-- Contact -->
+							<section class="contact">
+								<header>
+									<h3>這是我利用閒暇之餘，所打造的網站~~</h3>
+								</header>
+								<p>想要了解我的話，下面有一些聯絡方式喔~~~!!!</p>
+								<ul class="icons">
+									<li>
+										<a
+											href="https://www.facebook.com/profile.php?id=100002902433189"
+											class="icon brands fa-facebook-f">
+											<span class="label">Facebook</span>
+										</a>
+									</li>
+									<li>
+										<a
+											href="https://www.instagram.com/mie_mie1111/"
+											class="icon brands fa-instagram">
+											<span class="label">Instagram</span>
+										</a>
+									</li>
+									<li>
+										<a
+											href="https://github.com/andy32252"
+											class="icon brands alt fa-github">
+											<span class="label">GitHub</span>
+										</a>
+									</li>
+									<li>
+										<a
+											href="https://www.linkedin.com/in/%E5%98%8Eu-undefined-13b3a8266/"
+											class="icon brands fa-linkedin-in">
+											<span class="label">Linkedin</span>
+										</a>
+									</li>
+								</ul>
+							</section>
+
+							<!-- Copyright -->
+							<div class="copyright">
+								<ul class="menu">
+									<li>&copy; 這是我本人做的</li>
+									<li>
+										Design:
+										<a>by Chia-Yu</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="lightbox2/lightbox2-2.11.4/dist/js/lightbox-plus-jquery.min.js"></script>
+		<script src="assets2/js/jquery.min.js"></script>
+		<script src="assets2/js/jquery.dropotron.min.js"></script>
+		<script src="assets2/js/jquery.scrolly.min.js"></script>
+		<script src="assets2/js/jquery.scrollex.min.js"></script>
+		<script src="assets2/js/browser.min.js"></script>
+		<script src="assets2/js/breakpoints.min.js"></script>
+		<script src="assets2/js/util.js"></script>
+		<script src="assets2/js/main.js"></script>
+		<script src="assets2/js/index.js"></script>
+		<script>
+			// 設置隨機出現的文字
+			var arr = [
+				'關於感情問題，我一律建議分手!!!',
+				'每天對自己說你是最棒的!!!',
+				'只要路是對的，就不怕路遠!!!',
+				'研究發現，生日過越多的人就越老!!!',
+				'不完美的生活裡，找到完整的自己!!!',
+				'女生說喜歡乾淨的男生，其實是喜歡長得帥的!!!',
+				'努力不為了誰，只為不錯過更好的自己!!!',
+				'當你懷疑人生的時候，不要懷疑，這就是你的人生!!!',
+				'不為失敗找藉口，要為成功找方法!!!',
+				'沒有負能量，哪來正能量!!!',
+				'明明可以靠顏值吃飯，偏偏卻要工作，我不知道明明是誰，反正我是偏偏...',
+				'小時候媽媽說，乖一點才交得到女朋友，後來發現，不乖可以同時交好幾個!!!',
+				'常喝珍奶是不好的，如果戒不掉一定是這裡有賣!!!'
+			];
+			document.onclick = function (x) {
+				// 元素節點
+				var span1 = document.createElement('span');
+				// 當前滑鼠位置
+				span1.style.left = x.clientX + 'px';
+				span1.style.top = x.clientY + 'px';
+				// 找arr隨機文字
+				span1.innerHTML = arr[Math.floor(Math.random() * arr.length)];
+				// 動畫效果
+				setTimeout(function () {
+					span1.style.opacity = '1';
+					span1.style.transform = 'translateY(-100px)';
+				}, 100);
+				setTimeout(function () {
+					span1.style.opacity = '0';
+					span1.style.transform = 'translate(-100px,-100px)';
+				}, 1500);
+				// 清掉文字
+				var chi = document.getElementsByClassName('span');
+				for (var i = 0; i < chi.length; i++) {
+					if (chi[i].style.opacity === '0') {
+						document.body.removeChild(chi[i]);
+					}
+				}
+				// span加到body
+				document.body.appendChild(span1);
+			};
+		</script>
+	</body>
+</html>
