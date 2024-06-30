@@ -1960,21 +1960,37 @@ ol li {
 
 /* Actions */
 
+<<<<<<< HEAD
 ul.actions {
 	margin: 3em 0 0 0;
 	list-style: none;
 	padding-left: 0;
 }
+=======
+	ul.actions {
+		margin: 1em 0 0 0;
+		list-style: none;
+		padding-left: 0;
+	}
+>>>>>>> 0d2634ce59c52bd184d9f52201d9ad63b8e37848
 
 form ul.actions {
 	margin-top: 0;
 }
 
+<<<<<<< HEAD
 ul.actions li {
 	display: inline-block;
 	margin: 0 0.75em 0 0.75em;
 	padding-left: 0;
 }
+=======
+		ul.actions li {
+			display: inline-block;
+			margin: 0 0em 0 0.75em;
+			padding-left: 0;
+		}
+>>>>>>> 0d2634ce59c52bd184d9f52201d9ad63b8e37848
 
 ul.actions li:first-child {
 	margin-left: 0;
@@ -2626,6 +2642,7 @@ body.homepage.is-preload #header:after {
 
 /* Footer */
 
+<<<<<<< HEAD
 #footer {
 	position: relative;
 	overflow: hidden;
@@ -2633,6 +2650,15 @@ body.homepage.is-preload #header:after {
 	background: #2b252c;
 	color: #fff;
 }
+=======
+	#footer {
+		position: relative;
+		overflow: hidden;
+		padding: 3em 0 3em 0;
+		background: #2b252c;
+		color: #fff;
+	}
+>>>>>>> 0d2634ce59c52bd184d9f52201d9ad63b8e37848
 
 #footer .icon.circled {
 	background: #fff;
